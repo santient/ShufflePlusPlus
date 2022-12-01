@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="a7af81c6-ab3c-4da3-b949-8714ad4d551e" version="1">
+  <Properties>
+    <Name>Shuffle++</Name>
+    <Description>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Description>
+    <Created>1669866404</Created>
+    <Teaser>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Teaser>
+    <Authors>Santiago Benoit</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <FrontEndActions>
+    <AddMap id="AddShufflePlusPlus">
+      <Properties>
+        <Name>Shuffle++</Name>
+        <Description>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Description>
+        <Group>StandardMaps</Group>
+      </Properties>
+      <File>Maps/ShufflePlusPlus.lua</File>
+    </AddMap>
+  </FrontEndActions>
+  <InGameActions>
+    <ImportFiles id="ImportShufflePlusPlus">
+      <Properties>
+        <LoadOrder>1001</LoadOrder>
+      </Properties>
+      <File>Maps/ShufflePlusPlus.lua</File>
+    </ImportFiles>
+    <ImportFiles id="ImportFeatureGeneratorPlusPlus">
+      <Properties>
+        <LoadOrder>1000</LoadOrder>
+      </Properties>
+      <File>Maps/Utility/FeatureGeneratorPlusPlus.lua</File>
+    </ImportFiles>
+  </InGameActions>
+  <Files>
+    <File>Maps/ShufflePlusPlus.lua</File>
+    <File>Maps/Utility/FeatureGeneratorPlusPlus.lua</File>
+  </Files>
+</Mod>
