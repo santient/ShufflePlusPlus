@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Shuffle++</Name>
+    <Guid>a7af81c6-ab3c-4da3-b949-8714ad4d551e</Guid>
+    <ProjectGuid>4192fbb1-b5af-490b-af1c-83da4cd1290f</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Teaser>
+    <Description>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Description>
+    <Authors>Santiago Benoit</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
+</Associations>]]></AssociationData>
+    <AssemblyName>ShufflePlusPlus</AssemblyName>
+    <RootNamespace>ShufflePlusPlus</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="ImportShufflePlusPlus"><Properties><LoadOrder>1001</LoadOrder></Properties><File>Maps/ShufflePlusPlus.lua</File></ImportFiles><ImportFiles id="ImportFeatureGeneratorPlusPlus"><Properties><LoadOrder>1000</LoadOrder></Properties><File>Maps/Utility/FeatureGeneratorPlusPlus.lua</File></ImportFiles></InGameActions>]]></InGameActionData>
+    <FrontEndActionData><![CDATA[<FrontEndActions><AddMap id="AddShufflePlusPlus"><Properties><Name>Shuffle++</Name><Description>An enhancement of the Shuffle map generation script for much more varied and unique worlds.</Description><Group>StandardMaps</Group></Properties><File>Maps/ShufflePlusPlus.lua</File></AddMap></FrontEndActions>]]></FrontEndActionData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Maps" />
+    <Folder Include="Maps\Utility" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maps\ShufflePlusPlus.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Maps\Utility\FeatureGeneratorPlusPlus.lua">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
