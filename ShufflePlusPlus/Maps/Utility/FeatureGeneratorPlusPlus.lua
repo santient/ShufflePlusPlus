@@ -60,7 +60,7 @@ function FeatureGenerator.Create(args)
 	for i = 0, nMix do
 		iReefPercent[i] = TerrainBuilder.GetRandomNumber(9 * 2 + 1, "feature trait");
 	end
-	local iIcePercent = TerrainBuilder.GetRandomNumber(1 * 2 + 1, "feature trait");
+	local iIcePercent = 0;
 
 	local gridWidth, gridHeight = Map.GetGridSize();
 	local iEquator = math.ceil(gridHeight / 2) + iEquatorAdjustment;
